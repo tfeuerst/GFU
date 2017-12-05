@@ -28,3 +28,35 @@
 
 }());
 
+// Eigene Übung
+(function () {
+    'use strict';
+
+    function personFactory(n, a) {
+        var p;
+
+        if(typeof n !== 'string' || typeof a !== 'number'){
+            throw new TypeError();
+        }
+
+        p = {
+            name: n,
+            age: a,
+            olderThirty: function () {
+                if(this.age > 30){
+                    console.log(true);
+                    return true;
+                }
+
+                console.log(false);
+                return false;
+            }
+        };
+
+        return p;
+    }
+
+    var h1 = personFactory('Tom', 43);
+
+    console.log(h1);
+}())
