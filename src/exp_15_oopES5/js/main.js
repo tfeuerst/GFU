@@ -47,4 +47,15 @@ console.log(o1);
 
 //delete o1.color;
 
+var o2 = Object.create({
+    makeLabel: function () {
+        return this.price.toLocaleString('de-DE') + ' €';
+    }
+}, {
+    price: {
+        value: 200.98
+    }
+});
 
+console.log(o2);
+console.log(o2.makeLabel());
