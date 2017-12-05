@@ -1,0 +1,4 @@
+node_modules
+out
+.idea
+src/exp_06_tdd/test/lib
