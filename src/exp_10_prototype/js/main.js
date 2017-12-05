@@ -11,6 +11,7 @@ console.log(Regal.prototype.constructor === Regal);
 
 // Erweiterung des Prototyps
 Regal.prototype.farbe = 'creme';
+Regal.prototype.anschaffungsjahr = 2017;
 Regal.prototype.faecher = [1,2,3,4];
 
 
