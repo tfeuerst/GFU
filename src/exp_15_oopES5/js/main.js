@@ -1,12 +1,11 @@
 'use strict';
 
 var o = {
-    a : 1,
-    c : Object.freeze([4,5,3])
+    a: 1,
+    c: Object.freeze([4, 5, 3])
 };
 
 //ES5
-
 console.dir(Object);
 Object.seal(o);
 //o.b = 2;
@@ -19,8 +18,33 @@ Object.freeze(o);
 
 //o.a = 'AHA';
 
-o.c.push(9);
+//o.c.push(9);
 //o.c = 'neu';
 console.log(o);
+
+var o1 = {
+    a: 1
+};
+
+Object.defineProperties(o1, {
+    color: {
+        value: 'red',
+        writeable: false,
+        configurable: false,
+        enumerable: false
+    },
+    id : {
+        get: function () {
+            return 1;
+        },
+        set: function (n) {
+            this.a = n;
+        }
+    }
+});
+
+console.log(o1);
+
+//delete o1.color;
 
 
