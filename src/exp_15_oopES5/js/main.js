@@ -29,7 +29,7 @@ var o1 = {
 Object.defineProperties(o1, {
     color: {
         value: 'red',
-        writeable: false,
+        writable: false,
         configurable: false,
         enumerable: false
     },
