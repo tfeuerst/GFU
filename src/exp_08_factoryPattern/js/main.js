@@ -59,4 +59,5 @@
     var h1 = personFactory('Tom', 43);
 
     console.log(h1);
-}())
+    console.log('olderThirty: ' + h1.olderThirty());
+}());
