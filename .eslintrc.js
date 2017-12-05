@@ -6,7 +6,8 @@ module.exports = {
     "globals": {
         "it": true,
         "expect": true,
-        "describe": true
+        "describe": true,
+        "COMPANY": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
