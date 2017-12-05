@@ -10,9 +10,13 @@ this.COMPANY.Person = (function () {
         // ES3 Property
         this.fullname = fn;
 
+        // member has-a-relation
+        this.projects = []
+
         this.getUid = function () {
             return uid;
         };
+
     };
 
     Person.isPerson = function (p) {
