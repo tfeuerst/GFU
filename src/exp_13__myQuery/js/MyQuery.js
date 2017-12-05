@@ -6,6 +6,7 @@ this.$ = (function () {
     }
 
     Q.prototype.css = function (prop, value) {
+        console.log(prop, value);
         this.c.forEach(function (element) {
             element.style[prop] = value;
         });
