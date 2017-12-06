@@ -15,14 +15,9 @@
         console.log(a);
     }
 }
+let v =3;
 
 console.log(c);
 
 b = 4;
 console.log(b);
-
-
-const d = 2;
-console.log(d);
-d = 5;
-console.log(d);
