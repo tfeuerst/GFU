@@ -7,10 +7,14 @@ var p1 = new Promise(function (resolve) {
 });
 
 p1
-    .then(function () {
+    .then(function (d) {
+        //resolve / then
+        console.log(d)
         return new Promise(function (resolve) {
-            resolve('aha');
+            resolve('aha', resolve);
         });
+    }, function () {
+        // reject / catch
     })
     .then(function (datenObj) {
         console.log(datenObj);
