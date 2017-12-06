@@ -11,13 +11,14 @@ let get = function (url) {
                 }
             }
         };
-    }
-    );
-
+    });
 };
 
-get('http://httpbin.org/get')
+get('http://httpbin.org/get?test1=1&test2=2')
     .then((daten) => JSON.parse(daten))
     .then((d) => {
         console.log(d);
+        console.log(d.args.test1);
+        console.log(d.args.test2);
+        console.log(d.headers.Pragma);
     });
