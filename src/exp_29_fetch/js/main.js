@@ -1,6 +1,10 @@
-fetch('http://httpbin.org/get', {
+let r = new Request('http://httpbin.org/get', {
     method: 'GET'
-})
-    .then(function (daten) {
-        console.log(daten);
-    });
+});
+
+fetch(r)
+    .then(res => res.json())
+//    .then(d => console.log(d));
+    .then(function(d){
+        console.log(d);
+    })
