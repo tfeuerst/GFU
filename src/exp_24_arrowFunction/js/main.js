@@ -28,10 +28,11 @@ class Product {
 
         let f = function () {
             console.log(this);
-        };
-        f();
+        }();
+//        f();
 
         let g = () => {
+            console.log(this);
             return this.a;
         };
         g();
